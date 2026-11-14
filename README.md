@@ -74,3 +74,8 @@ assets/pet/        宠物素材，格式见 assets/pet/README.md
 assets/voice/      台词（lines.json）和语音
 assets/icon.png    托盘图标
 ```
+
+## 许可
+
+- 代码：以 [GPL-3.0](LICENSE) 许可证发布，修改后再分发需要同样以 GPL-3.0 开源。
+- 素材（角色形象、动画帧、参考图、语音、台词、图标）：版权归 hkking 所有，不在 GPL-3.0 的范围内，可以学习和自用，禁止商用和二次分发，详见 [素材许可说明](LICENSE-ASSETS.md)。
