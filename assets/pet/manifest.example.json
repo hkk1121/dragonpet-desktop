@@ -1,0 +1,15 @@
+{
+  "width": 160,
+  "height": 160,
+  "facing": "right",
+  "pixelArt": false,
+  "walkSpeed": 2,
+  "actions": {
+    "idle":  { "frames": "idle",  "fps": 8,  "loop": true },
+    "walk":  { "frames": "walk",  "fps": 10, "loop": true },
+    "sleep": { "frames": "sleep", "fps": 4,  "loop": true },
+    "drag":  { "frames": "drag",  "fps": 8,  "loop": true },
+    "talk":  { "frames": "talk",  "fps": 8,  "loop": true },
+    "happy": { "sheet": "happy.png", "frameWidth": 128, "frameHeight": 128, "count": 6, "fps": 10, "loop": false }
+  }
+}

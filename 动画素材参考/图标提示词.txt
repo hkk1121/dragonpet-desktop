@@ -1,0 +1,100 @@
+GPT龙娘 · 桌宠图标提示词（食物图标 + 状态图标）
+==========================================================
+
+【通用要求】
+- 画面比例 1:1，分辨率 1024 及以上
+- 每个图标单独生成一张，每张只画一个物体
+- 背景是纯绿色 #00B800，我这边会统一抠成透明
+- 做好后放进 raw\icons\，文件名用下面每条后面的英文名（例如 food_cake.png）
+
+【通用负面提示词】（工具支持时填上）
+文字, 数字, 水印, 边框, 阴影, 渐变背景, 纹理背景, 手, 人物, 盘子, 桌面, 热气, 闪光, 星星, 多个物体, 写实照片
+
+
+==========================================================
+一、食物图标（投喂用，至少做 2~3 种）
+==========================================================
+
+① 草莓奶油小蛋糕（最爱，好感度加得多）    文件名：food_cake.png
+----------------------------------------------------------
+A single cute game item icon of a small strawberry shortcake slice with cream and one strawberry on top, soft anime chibi illustration style with delicate clean linework and gentle cel shading, pastel palette harmonizing with white, lavender and soft pink. Slight three-quarter top view, the item is centered and occupies about 70 percent of the square frame, with even margins on all sides. No hands, no characters, no plate, no steam, no sparkles.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800. No shadow, no gradient, no texture, no text, no watermark, no border. Square 1:1. Make ONE image.
+
+
+② 马卡龙    文件名：food_macaron.png
+----------------------------------------------------------
+A single cute game item icon of two stacked pastel pink and lavender macarons, soft anime chibi illustration style with delicate clean linework and gentle cel shading, pastel palette harmonizing with white, lavender and soft pink. Slight three-quarter top view, the item is centered and occupies about 70 percent of the square frame, with even margins on all sides. No hands, no characters, no plate, no steam, no sparkles.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800. No shadow, no gradient, no texture, no text, no watermark, no border. Square 1:1. Make ONE image.
+
+
+③ 白玫瑰花茶（呼应角色的白玫瑰主题）    文件名：food_rose_tea.png
+----------------------------------------------------------
+A single cute game item icon of a small white porcelain teacup of light rose tea with a white rose petal floating on it, soft anime chibi illustration style with delicate clean linework and gentle cel shading, pastel palette harmonizing with white, lavender and soft pink. Slight three-quarter top view, the item is centered and occupies about 70 percent of the square frame, with even margins on all sides. No hands, no characters, no saucer, no steam, no sparkles.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800. No shadow, no gradient, no texture, no text, no watermark, no border. Square 1:1. Make ONE image.
+
+
+④ 苹果    文件名：food_apple.png
+----------------------------------------------------------
+A single cute game item icon of a shiny red apple with one green leaf, soft anime chibi illustration style with delicate clean linework and gentle cel shading, pastel palette harmonizing with white, lavender and soft pink. Slight three-quarter top view, the item is centered and occupies about 70 percent of the square frame, with even margins on all sides. No hands, no characters, no plate, no steam, no sparkles.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800. No shadow, no gradient, no texture, no text, no watermark, no border. Square 1:1. Make ONE image.
+
+（注意：叶子是绿色的，抠图时可能被扣掉一部分；如果叶子缺了，可以把 "one green leaf" 改成 "one small brown stem"）
+
+
+⑤ 曲奇饼干（和 eat 动画里拿的一致）    文件名：food_cookie.png
+----------------------------------------------------------
+A single cute game item icon of a round golden butter cookie with a few chocolate chips, soft anime chibi illustration style with delicate clean linework and gentle cel shading, pastel palette harmonizing with white, lavender and soft pink. Slight three-quarter top view, the item is centered and occupies about 70 percent of the square frame, with even margins on all sides. No hands, no characters, no plate, no steam, no sparkles.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800. No shadow, no gradient, no texture, no text, no watermark, no border. Square 1:1. Make ONE image.
+
+
+⑥ 青椒（讨厌的食物，喂了会触发 dislike 嫌弃动作）    文件名：food_pepper.png
+----------------------------------------------------------
+A single cute game item icon of a glossy green bell pepper, soft anime chibi illustration style with delicate clean linework and gentle cel shading, slightly darker forest green tones with a clear dark outline. Slight three-quarter top view, the item is centered and occupies about 70 percent of the square frame, with even margins on all sides. No hands, no characters, no plate, no steam, no sparkles.
+Background: a single completely uniform, flat solid pure white RGB(255,255,255), hex #FFFFFF. No shadow, no gradient, no texture, no text, no watermark, no border. Square 1:1. Make ONE image.
+
+（注意：青椒本身是绿色，绿幕会把它抠没，所以这一张改用纯白背景）
+
+
+==========================================================
+二、状态图标（可选，没有的话程序先用简单图形代替）
+==========================================================
+
+⑦ 爱心（好感度图标；摸头 / 投喂时从头顶飘出的小爱心也用它）    文件名：status_heart.png
+----------------------------------------------------------
+A single cute UI icon of a plump glossy pink heart with a small white highlight, soft anime chibi style with delicate clean linework and gentle cel shading, simple readable shape that stays clear at small sizes, pastel palette harmonizing with white, lavender and soft pink. Front view, centered, occupies about 75 percent of the square frame with even margins.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800. No shadow, no gradient, no texture, no text, no numbers, no watermark, no border. Square 1:1. Make ONE image.
+
+
+⑧ 小饭碗（饱食度图标）    文件名：status_rice_bowl.png
+----------------------------------------------------------
+A single cute UI icon of a small round white rice bowl with a lavender rim, filled with fluffy white rice, soft anime chibi style with delicate clean linework and gentle cel shading, simple readable shape that stays clear at small sizes, pastel palette harmonizing with white, lavender and soft pink. Front view, centered, occupies about 75 percent of the square frame with even margins.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800. No shadow, no gradient, no texture, no text, no numbers, no watermark, no border. Square 1:1. Make ONE image.
+
+
+==========================================================
+【中文版】（工具对英文理解不好时使用）
+----------------------------------------------------------
+模板：一个可爱的游戏道具图标，画的是{物体}，柔和的日系Q版插画风格，线条细腻干净，柔和的赛璐璐上色，配色和白色、淡紫色、浅粉色协调。略微俯视的四分之三视角，物体居中，约占画面的 70%，四周留白均匀。纯绿色背景 #00B800，完全均匀，无阴影、无渐变、无纹理、无文字、无水印、无边框，没有手、没有人物、没有盘子、没有热气、没有闪光。1:1 方图，只画一个。
+
+物体：
+  草莓奶油小蛋糕  一小块草莓奶油蛋糕，奶油上放着一颗草莓
+  马卡龙          两个叠在一起的粉色和淡紫色马卡龙
+  白玫瑰花茶      一个白瓷小茶杯，里面是淡淡的玫瑰花茶，漂着一片白玫瑰花瓣
+  苹果            一个红亮的苹果，带一片绿叶
+  曲奇饼干        一块圆形金黄色黄油曲奇，上面有几颗巧克力豆
+  青椒            一个油亮的绿色青椒（背景改成纯白色 #FFFFFF）
+  爱心            一个圆润有光泽的粉色爱心，带一小块白色高光（正面视角，约占画面 75%）
+  小饭碗          一个淡紫色碗边的白色小圆碗，盛满蓬松的白米饭（正面视角，约占画面 75%）
+
+
+==========================================================
+| 图标       | 文件名                 | 是否必须 |
+|------------|------------------------|----------|
+| 草莓蛋糕   | food_cake.png          | 建议     |
+| 马卡龙     | food_macaron.png       | 可选     |
+| 白玫瑰花茶 | food_rose_tea.png      | 可选     |
+| 苹果       | food_apple.png         | 可选     |
+| 曲奇饼干   | food_cookie.png        | 建议（和 eat 动画一致） |
+| 青椒       | food_pepper.png        | 建议（触发嫌弃） |
+| 爱心       | status_heart.png       | 可选     |
+| 小饭碗     | status_rice_bowl.png   | 可选     |

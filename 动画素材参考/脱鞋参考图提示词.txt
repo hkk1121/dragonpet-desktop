@@ -1,0 +1,24 @@
+GPT龙娘 · 脱鞋动画参考帧（AI 生图）
+==========================================================
+
+本批对应的功能（右键菜单「脱鞋 / 穿鞋」）：
+  takeoff   站着 → 坐到地上 → 脱下两只靴子放在身边              不循环
+  barefoot  脱鞋后坐着休息（光脚待机），一直保持到穿鞋            循环
+  puton     穿回靴子 → 站起来 → 回到站立姿势                     不循环
+
+三段视频都由我用视频模型生成，只需要你出下面这一张"脱鞋后坐着"的参考图，
+它同时作为 takeoff 的尾帧、barefoot 的首尾帧、puton 的首帧。
+
+【输入图】动画素材参考\4-video-front-green.png（正面站姿）
+  可以把 动画素材参考\第三批姿态参考\type.png（坐地敲键盘）作为第二张参考图一起传，帮助保持坐姿时的人物大小
+【输出】1:1（960x960 最好），放进 raw\shoes_ref\barefoot.png
+  可以多出几张挑一张：人物大小和输入图一致、整个人坐在画面下方、两只靴子完整清楚、背景纯绿没有阴影
+
+
+① barefoot.png 脱鞋后坐着
+----------------------------------------------------------
+Use case: identity-preserve. Asset: a clean reference frame for a chibi desktop-pet "resting with shoes off" loop, square 1:1.
+Edit target: the supplied image. Preserve EXACTLY the character identity, delicate anime linework, lavender eyes, silver-white long wavy hair, lilac curled dragon horns, pointed ears, white rose hair accessory with purple ribbon, white and lavender lace dress, small dark purple shoulder bag, white tights, lilac dragon tail, and chibi proportions. Keep the same character scale as the input image.
+Change her pose to SITTING ON THE GROUND facing the camera, relaxed, with both legs stretched forward and slightly apart, skirt spread on the ground, hands resting on the ground beside her hips. She has taken off her white lace-up boots: she is now wearing only her white tights on her feet, toes pointing up. The pair of white boots stands neatly side by side on the ground right next to her, on the right side of the frame. Content relaxed smile, light blush. The tail lies curled on the ground on the left side.
+Composition: a fixed straight-on full-body view, the same camera as the input image. Her body is centered horizontally; the lowest point of her body (bottom and heels) sits at the same height as the soles of the boots in the input image, in the lower part of the frame. All horns, hair, skirt, feet, tail and both boots fully visible, at least 8 percent margin below and on both sides. No cropping.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No ground plane, no horizon line, no texture, no gradient, no vignette, no cast shadow, no contact shadow. No captions, text, watermark, border or extra objects. Make ONE image.

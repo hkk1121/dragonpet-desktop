@@ -1,0 +1,246 @@
+GPT龙娘 · 桌宠动画提示词（第三批）
+==========================================================
+
+本批对应的功能：
+  被扔出去        → fall 空中下落、land 落地（可选 dizzy 摔晕）
+  眼睛/头跟随鼠标 → look 左右转头
+  跟着敲键盘      → type 敲键盘
+  思考            → think 思考
+  按时段问候      → wave 挥手（可选：早上 stretch 伸懒腰、深夜 yawn 打哈欠）
+  投喂            → eat 吃东西（可选 refuse 吃饱拒绝）+ 食物图标
+  好感度/饱食度   → hungry 饿了、sad 被冷落、love 好感度升级 + 状态图标
+
+【参考图】
+4-video-front-green.png  正面（大小和站位与前两批一致）→ 本批所有动作
+工具支持多张参考图时，可以把 1-front-green.png / 3-back-green.png 一起传上去，帮助保持角色一致
+
+【通用设置】（和前两批一样）
+- 画面比例 1:1，分辨率 720p 及以上
+- 镜头"固定 / 静止"，关闭运镜
+- 标了【首尾帧】的动作：首帧和尾帧都传 4-video-front-green.png
+- 标了【尾帧】的动作：只把尾帧设为 4-video-front-green.png，保证最后能回到站姿
+- 没标的动作不用首尾帧功能，生成后我挑一段平稳的做循环
+- 可以像上次一样把几个动作做进同一个视频，我来切；每段之间最好回到站立姿势
+- 每个动作多生成几次，挑脚底最稳、人物不漂移的那条
+
+【通用负面提示词】
+镜头移动, 推拉镜头, 缩放, 旋转, 人物位移, 走出画面, 背景变化, 阴影, 文字, 水印, 多余的人物, 手入画, 画面外的手, 角色变形, 换装, 发色改变, 特效, 爱心特效, 问号, 符号
+
+
+==========================================================
+一、被扔出去
+==========================================================
+
+① fall 空中下落（被拎起后甩出去、在空中飞的时候）    时长：1~2 秒    循环
+----------------------------------------------------------
+全身Q版龙娘悬在半空中正在往下掉，表情惊慌，眼睛睁大、嘴巴张成小圆形，双手双脚向外张开乱挥，白色长发、裙摆和龙尾被风吹得向上飘起，身体在原位小幅度晃动，人物整体始终在画面中央，不上下移动，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字，首尾帧一致可无缝循环
+
+（说明：被甩飞时的旋转、抛物线由程序实现，素材只需要原地"正在掉"的姿势）
+
+
+② land 落地    时长：2 秒左右    不循环    【尾帧】
+----------------------------------------------------------
+Q版龙娘从画面上方掉下来，屁股着地摔坐在画面下方，身体弹了一下，表情吃痛、眼角带泪花，一只手揉着屁股，晃晃脑袋，然后撑着地面站起来，拍拍裙子，回到正常站立姿势，落地后位置不变，不左右移动，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字
+
+
+③ dizzy 摔晕（可选，扔得特别用力时）    时长：2~3 秒    循环
+----------------------------------------------------------
+全身Q版龙娘摔晕后迷迷糊糊地站着，眼睛变成转圈的漩涡眼，脑袋和上半身晕乎乎地慢慢画圈摇晃，脚步有点站不稳但双脚不离地，龙尾无力地垂着轻轻晃，人物位置不变，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字，首尾帧一致可无缝循环
+
+
+==========================================================
+二、眼睛/头跟随鼠标
+==========================================================
+
+④ look 左右转头    时长：4 秒左右    不循环    【首尾帧】
+----------------------------------------------------------
+全身Q版龙娘原地站立，身体保持不动，只有头和眼睛缓慢平滑地转动：先从看镜头慢慢转头看向画面左侧，停顿一下，再慢慢转回看镜头，接着慢慢转头看向画面右侧，停顿一下，最后转回看镜头，整个过程匀速平滑、没有跳变，表情好奇，不眨眼，肩膀和身体不转动，双脚不离地、位置不变，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字
+
+（说明：程序会根据鼠标在宠物左边还是右边，把这段视频当"进度条"来拖动帧，所以转头越匀速越好，中途尽量不要眨眼）
+
+
+==========================================================
+三、跟着敲键盘
+==========================================================
+
+⑤ type 敲键盘    时长：2 秒左右    循环
+----------------------------------------------------------
+Q版龙娘坐在地上，面前地上放着一个白色的小键盘，键帽上没有任何字，她双手放在键盘上认真地敲字，左手和右手交替按下，每次按键手指都明显下压再抬起，节奏均匀，眼睛看着键盘，表情专注，长发和龙尾自然垂落轻轻晃动，整个人和键盘完整在画面内、坐在画面下方，位置不变，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字，首尾帧一致可无缝循环
+
+（说明：参考图是站姿，这个动作不用首尾帧功能；如果想用首尾帧，可以先用下面"⑤-参考帧"出一张坐姿图当首尾帧。
+ 程序会在你每按一次键时推进几帧，所以"左右手交替、节奏均匀"最重要）
+
+
+⑤-参考帧 type 坐姿参考图（可选，用图像工具生成）
+----------------------------------------------------------
+Use case: identity-preserve. Asset: a clean reference frame for a chibi desktop-pet typing loop, square 1:1.
+Edit target: the supplied image. Preserve the exact character identity, delicate anime linework, lavender eyes, silver-white long hair, lilac curled dragon horns, pointed ears, rose hair accessory with purple ribbon, white and lavender lace dress, small dark shoulder bag, lilac dragon tail, and chibi proportions.
+Change her pose to SITTING ON THE GROUND with her legs tucked to one side, skirt spread on the ground. A small plain white keyboard lies on the ground in front of her; the keycaps are completely blank, NO letters or symbols. Both hands rest on the keyboard ready to type, looking down at it with a focused expression. NO chair, NO desk, NO laptop screen.
+Composition: a fixed straight-on wide full-body view. All horns, hair, skirt, feet, tail and keyboard visible. The seated character occupies approximately 55 percent of the square frame height, centered horizontally in the lower half, with generous empty green space above, and at least 12 percent margin below and on both sides. No cropping.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No ground plane, no horizon line, no texture, no gradient, no vignette, no cast shadow, no contact shadow. No captions, text, watermark, border or extra objects. Make ONE image.
+
+
+==========================================================
+四、思考
+==========================================================
+
+⑥ think 思考（等 GPT 回复时）    时长：3 秒左右    循环    【首尾帧】
+----------------------------------------------------------
+全身Q版龙娘原地站立认真思考，一只手托着下巴，另一只手抱在胸前托着手肘，眼睛望向斜上方，歪着头若有所思，偶尔眨一下眼，嘴巴微微抿着，龙尾尾尖像在思考一样慢慢左右摆动，双脚不离地、位置不变，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字，不出现问号和任何特效，首尾帧一致可无缝循环
+
+
+==========================================================
+五、按时段问候
+==========================================================
+
+⑦ wave 挥手问候（启动时 / 白天）    时长：2 秒左右    不循环    【首尾帧】
+----------------------------------------------------------
+全身Q版龙娘原地站立，看到镜头后眼睛一亮，开心地笑着举起一只手朝镜头挥手打招呼，挥三下，身体随之轻轻晃动，龙尾欢快地摇摆，然后把手放下回到站立姿势，双脚不离地、位置不变，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字
+
+
+⑧ stretch 伸懒腰（可选，早上启动时）    时长：2~3 秒    不循环    【首尾帧】
+----------------------------------------------------------
+全身Q版龙娘刚睡醒，原地站着闭眼双手交叉高高举过头顶，踮起脚尖用力伸了个大懒腰，身体向上拉长，龙尾也跟着伸直，然后放松下来，揉一下眼睛，睁开眼睛对着镜头元气地微笑，回到站立姿势，位置不变，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字
+
+
+⑨ yawn 打哈欠（可选，深夜启动 / 催你睡觉时）    时长：2~3 秒    不循环    【首尾帧】
+----------------------------------------------------------
+全身Q版龙娘原地站着，困倦地半眯着眼，用一只手捂着嘴打了一个大大的哈欠，眼角挤出一点泪花，肩膀垮下来，另一只手揉揉眼睛，龙尾无精打采地垂着，然后迷迷糊糊地回到站立姿势，双脚不离地、位置不变，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字
+
+
+==========================================================
+六、投喂
+==========================================================
+
+⑩ eat 吃东西    时长：3 秒左右    循环
+----------------------------------------------------------
+全身Q版龙娘原地站立，双手捧着一块圆形的小曲奇饼干，小口小口地咬着吃，脸颊鼓鼓地嚼着，眯起眼睛露出幸福满足的表情，脸颊微红，龙尾开心地慢慢摇摆，双脚不离地、位置不变，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字，首尾帧一致可无缝循环
+
+（说明：参考图手里没拿东西，这个动作不用首尾帧功能。
+ 不管投喂什么，吃的动画都统一用这一段；如果想"喂什么就吃什么"，把"一块圆形的小曲奇饼干"换成对应食物，每种食物各生成一段）
+
+
+⑪ refuse 吃饱了拒绝（可选，饱食度满时还投喂）    时长：2 秒左右    不循环    【首尾帧】
+----------------------------------------------------------
+全身Q版龙娘原地站立，一只手摸着圆滚滚的小肚子，另一只手在胸前摆手拒绝，轻轻摇头，表情为难又有点撑，嘴巴撅起，然后放下手回到站立姿势，双脚不离地、位置不变，画面中不出现食物，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字
+
+
+⑫ 食物图标（静态图，用图像工具生成，每种食物单独一张）
+----------------------------------------------------------
+建议食物：
+  草莓奶油小蛋糕（最爱，好感度加得多）
+  马卡龙
+  白玫瑰花茶（一杯，呼应角色的白玫瑰主题）
+  苹果
+  曲奇饼干（和 eat 动画里拿的一致）
+  青椒（讨厌的食物，喂了会触发 dislike 嫌弃动作）
+
+模板（把 {食物} 换成上面的英文）：
+A single cute game item icon of {食物}, soft anime chibi illustration style with delicate clean linework and gentle cel shading, pastel palette harmonizing with white, lavender and soft pink. Slight three-quarter top view, the item is centered and occupies about 70 percent of the square frame, with even margins on all sides. No hands, no characters, no plate unless part of the item, no steam, no sparkles.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800. No shadow, no gradient, no texture, no text, no watermark, no border. Square 1:1. Make ONE image.
+
+食物英文：
+  草莓奶油小蛋糕  a small strawberry shortcake slice with cream and one strawberry on top
+  马卡龙          two stacked pastel pink and lavender macarons
+  白玫瑰花茶      a small white porcelain teacup of light rose tea with a white rose petal floating on it
+  苹果            a shiny red apple with one green leaf
+  曲奇饼干        a round golden butter cookie with a few chocolate chips
+  青椒            a glossy green bell pepper
+
+
+==========================================================
+七、好感度 / 饱食度
+==========================================================
+
+⑬ hungry 饿了（饱食度低时待机）    时长：3 秒左右    循环    【首尾帧】
+----------------------------------------------------------
+全身Q版龙娘原地站立，饿得无精打采，一只手捂着肚子，肩膀垮下来，眼睛半闭、眉毛八字委屈，嘴巴瘪着，身体微微前倾轻轻摇晃，龙尾软软地耷拉着拖在地上，偶尔可怜巴巴地抬眼看一下镜头，双脚不离地、位置不变，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字，首尾帧一致可无缝循环
+
+
+⑭ sad 被冷落（好感度低 / 很久没理她时待机）    时长：3~4 秒    循环
+----------------------------------------------------------
+Q版龙娘委屈地抱着膝盖蹲坐在地上，下巴搁在膝盖上，嘴巴撅着，眼睛水汪汪的，龙尾卷到身前被她抱着，偶尔偷偷抬眼瞄一下镜头又赌气地移开视线，身体随呼吸轻微起伏，整个人完整在画面内、蹲坐在画面下方，位置不变，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字，首尾帧一致可无缝循环
+
+（说明：参考图是站姿，这个动作不用首尾帧功能）
+
+
+⑮ love 好感度升级    时长：2 秒左右    不循环    【首尾帧】
+----------------------------------------------------------
+全身Q版龙娘原地站立，害羞又开心，脸颊一下子变得通红，双手在胸前比出一个爱心的形状，对着镜头甜甜地笑着眨一下眼，身体扭捏地左右轻晃，龙尾开心地快速摇摆，然后把手放下回到站立姿势，双脚不离地、位置不变，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字，不出现爱心特效（特效由程序叠加）
+
+
+⑯ 状态图标（静态图，用图像工具生成，每个单独一张）
+----------------------------------------------------------
+用途：
+  爱心    好感度图标；摸头 / 投喂时从头顶飘出来的小爱心也用它
+  小饭碗  饱食度图标
+
+模板（把 {图标} 换成下面的英文）：
+A single cute UI icon of {图标}, soft anime chibi style with delicate clean linework and gentle cel shading, simple readable shape that stays clear at small sizes, pastel palette harmonizing with white, lavender and soft pink. Front view, centered, occupies about 75 percent of the square frame with even margins.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800. No shadow, no gradient, no texture, no text, no numbers, no watermark, no border. Square 1:1. Make ONE image.
+
+图标英文：
+  爱心    a plump glossy pink heart with a small white highlight
+  小饭碗  a small round white rice bowl with a lavender rim, filled with fluffy white rice
+
+
+==========================================================
+【英文版】（工具对中文理解不好时使用，结尾统一追加这一段）
+----------------------------------------------------------
+, chibi dragon girl, full body, fixed camera, static shot, no camera movement, character stays in place, solid pure green background, no shadow, no text, no effects, no hands entering the frame, seamless loop
+
+fall    : falling in mid-air, panicked face, eyes wide, mouth a small "o", arms and legs flailing outward, hair skirt and tail blown upward, stays centered in the frame
+land    : drops from above and lands on her bottom at the lower part of the frame, bounces once, teary pained face, rubs her bottom, shakes her head, pushes herself up, pats her skirt, returns to standing (not loop, last frame = reference)
+dizzy   : standing dazed, swirly spiral eyes, head and upper body wobbling in slow circles, feet stay planted, tail drooping
+look    : body completely still, only head and eyes turn slowly and smoothly: camera -> screen left -> pause -> camera -> screen right -> pause -> camera, curious face, no blinking (not loop)
+type    : sitting on the ground, a small plain white keyboard with blank keycaps in front of her, typing with left and right hands alternating evenly, fingers pressing down clearly, focused face
+think   : standing, one hand on chin, other arm across chest supporting the elbow, looking up to the side, head tilted, tail tip swaying slowly, no question mark
+wave    : eyes light up, smiles and waves one hand at the camera three times, tail wagging, lowers hand back to standing (not loop)
+stretch : just woke up, eyes closed, arms crossed high above head, big stretch on tiptoes, relaxes, rubs one eye, smiles cheerfully at the camera (not loop)
+yawn    : sleepy half-closed eyes, covers mouth with one hand for a big yawn, tiny tear, rubs eye with the other hand, tail drooping (not loop)
+eat     : standing, holding a small round cookie with both hands, nibbling, cheeks puffed while chewing, eyes closed blissfully, light blush, tail wagging slowly
+refuse  : one hand on her round full tummy, other hand waving no in front of chest, small head shake, troubled stuffed pout, no food visible (not loop)
+hungry  : standing listlessly, one hand on tummy, shoulders slumped, half-closed eyes, worried brows, pouting, swaying slightly, tail limp on the ground, occasionally looks up pitifully
+sad     : sitting hugging her knees, chin on knees, pouting, teary eyes, hugging her tail, occasionally peeks at the camera then looks away sulkily
+love    : face suddenly flushes red, makes a heart shape with both hands in front of chest, sweet smile and a wink, shy little sway, tail wagging fast, lowers hands back to standing, no heart effects (not loop)
+
+
+==========================================================
+【合成建议】（想像上次一样几个动作做进一个视频时参考）
+----------------------------------------------------------
+fall + land       天然连贯：先悬空下落 1~2 秒，再落地摔坐、站起来
+wave + think      都是站姿
+look              单独一条，转头要匀速，不要和别的动作混
+type              单独一条（坐姿）
+eat + refuse      都和吃有关
+hungry + love     都是站姿
+sad               单独一条（蹲坐）
+stretch + yawn    可选，都是问候
+dizzy             可选，可以接在 land 后面
+
+
+==========================================================
+【做好之后】
+放进 raw\ 告诉我即可，合成一个视频或分开都行；图标放进 raw\icons\。
+
+| 动作     | 循环 | 是否必须 |
+|----------|------|----------|
+| fall     | 是   | 必须（被扔出去） |
+| land     | 否   | 必须（被扔出去） |
+| dizzy    | 是   | 可选 |
+| look     | 否   | 必须（跟随鼠标） |
+| type     | 是   | 必须（敲键盘） |
+| think    | 是   | 必须（思考） |
+| wave     | 否   | 必须（问候） |
+| stretch  | 否   | 可选 |
+| yawn     | 否   | 可选 |
+| eat      | 是   | 必须（投喂） |
+| refuse   | 否   | 可选 |
+| hungry   | 是   | 必须（饱食度） |
+| sad      | 是   | 必须（好感度） |
+| love     | 否   | 必须（好感度） |
+| 食物图标 | -    | 必须（投喂），至少 2~3 种 |
+| 状态图标 | -    | 可选，没有的话程序先用简单图形代替 |
+
+程序侧要改的：甩出去的速度和反弹、按鼠标位置拖动 look 的帧、全局键盘监听（做成开关）、等回复时切到 think、
+按时段选问候动作和台词、投喂菜单和食物掉落、饱食度 / 好感度数值和存档，这些等素材到了我一起做。

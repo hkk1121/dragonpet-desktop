@@ -1,0 +1,34 @@
+GPT龙娘 · 光脚躺姿（头朝左）参考图（AI 生图）
+==========================================================
+
+现有光脚躺姿头在右边，正好占住光脚待机时靴子的位置（画面右下），切换动作时靴子会跳位。
+所以换成头朝左、脚朝右的躺姿，靴子放在右下角，和光脚待机同一位置。
+旧躺姿是侧躺、腿伸直，太长会压到右下角的靴子，所以这次让小腿往上翘，把身体收短。
+
+传 2 张图：
+  图 1（人物和躺姿参考）：raw\shoes_ref\barefoot_lie.png
+  图 2（靴子位置参考）：raw\shoes_ref\barefoot.png
+
+【输出】1:1 正方形 PNG，放为 raw\shoes_ref\barefoot_lie_r.png
+  多出几张的话候选放 raw\shoes_ref\candidates\barefoot_lie_r_1.png、barefoot_lie_r_2.png …
+
+挑的标准：
+  1. 头在左、脚在右，头发离画面左边缘有一段空隙
+  2. 一双靴子在右下角，位置和图 2 差不多就行（我这边会再把图 2 的靴子精确贴到同一位置），脚和尾巴尽量不挡靴子
+  3. 玫瑰发饰、斜挎包、尾巴等细节和图 1 一致
+  4. 脚上是白色连裤袜（不是光着的皮肤），背景纯绿，没有阴影
+
+
+Use case: identity-preserve, re-pose. Asset: a clean reference frame for a chibi desktop-pet lying-down loop, square 1:1.
+The first image shows the character and her lying pose. The second image shows the same character sitting; use it ONLY for where the pair of white lace-up boots stands. Ignore the boots at the far left of the first image.
+
+Draw the SAME character lying on the ground on her side, facing the camera with a relaxed, content little smile, her cheek resting on her folded arm and hand, exactly like in the first image — but facing the OTHER direction: her head and upper body on the LEFT side of the frame, her skirt in the middle, her legs on the RIGHT side.
+Her knees are bent and her lower legs are raised up behind her (feet in the air, playfully lifted), so the whole body is more compact than in the first image. Her body, raised feet and tail fin must all stay inside the area from about 10% to about 74% of the frame width, ending to the LEFT of the boots.
+
+Preserve EXACTLY the character identity, delicate anime linework, lavender eyes, silver-white long wavy hair, lilac curled dragon horns, pointed ears, white rose hair accessories with purple ribbon, white and lavender lace dress, small dark purple shoulder bag lying on the ground next to her, lilac dragon tail with its fin, chibi proportions. The head and body are the same size as in the first image. This is a re-pose, NOT a mirrored copy of the first image.
+She is not wearing boots: her feet wear only her white tights (white fabric, not bare skin).
+
+The pair of white lace-up boots (same design as in both images) stands neatly side by side, upright, at the lower RIGHT of the frame, at the same position and size as the boots in the second image: roughly from 77% to 91% of the frame width, and from 77% to 90% of the frame height. Both boots fully visible, nothing overlaps them.
+Her body lies on the same ground line as the soles of the boots (about 90% of the frame height). Leave a clear margin of about 10% of the frame width between her hair and the left edge; nothing touches any edge of the frame.
+
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No ground plane, no horizon line, no texture, no gradient, no cast shadow, no contact shadow. No captions, text, watermark, border or extra objects. Make ONE image, not a collage.

@@ -1,0 +1,101 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+  user-select: none;
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* 对话气泡 */
+#bubble {
+  position: relative;
+  max-width: 260px;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+#bubble::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  margin-left: -8px;
+  border: 8px solid transparent;
+  border-bottom: 0;
+  border-top-color: #fff;
+}
+
+#bubble-text {
+  max-height: 160px;
+  overflow-y: auto;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+  user-select: text;
+}
+
+#bubble.error #bubble-text {
+  color: #d9534f;
+}
+
+/* 输入框 */
+#input-box {
+  margin-bottom: 8px;
+}
+
+#chat-input {
+  width: 240px;
+  padding: 8px 12px;
+  border: 2px solid #ffc96b;
+  border-radius: 18px;
+  outline: none;
+  font-size: 13px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#pet {
+  position: relative;
+  cursor: grab;
+}
+
+/* 钻入星云时铺满窗口画在宠物身后，不挡鼠标 */
+#nebula {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#pet:active {
+  cursor: grabbing;
+}
+
+/* 投喂掉落的食物、飘出的爱心，不挡鼠标 */
+#food, .heart {
+  position: absolute;
+  pointer-events: none;
+}
+
+#food {
+  top: 0;
+  left: 50%;
+}

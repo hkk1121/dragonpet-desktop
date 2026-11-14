@@ -1,0 +1,88 @@
+GPT龙娘 · 脱白丝参考图（AI 生图）
+==========================================================
+
+本批对应的功能（光脚时右键菜单「脱白丝 / 穿白丝」，和脱鞋 / 穿鞋一样的玩法）：
+  stockings_off  光脚坐着 → 脱下白色连裤袜，塞进旁边的两只靴子里      不循环
+  bare           脱白丝后坐着休息（光腿待机），一直保持到穿白丝          循环
+  stockings_on   从靴子里拿出白丝穿回去 → 回到光脚坐着                  不循环
+  bare_lie / bare_read / bare_type / bare_drag  脱白丝后的躺下 / 读书 / 敲键盘 / 被拎起   循环
+
+视频都由我用视频模型生成，只需要你出下面 5 张参考图。
+
+每张只传 1 张图（编辑目标）：raw\stockings_ref\src\ 下对应的图
+  这些是现在光脚动作的第 1 帧（已经垫成 960 绿底，靴子已在统一后的位置），所以人物和靴子都不要挪
+
+【输出】1:1 正方形 PNG（960x960 最好，1254x1254 也行，我这边会对齐），放进 raw\stockings_ref\
+  bare.png  bare_lie.png  bare_read.png  bare_type.png  bare_drag.png
+每张可以多出几张挑一张，没选上的放进 raw\stockings_ref\candidates\，文件名如 bare_1.png、bare_read_2.png
+
+挑的标准：
+  1. 人物位置、大小和输入图一样（两张叠起来看，头、角、身体、裙子基本重合）
+  2. 腿和脚是光着的皮肤，肤色和手臂、脸一样，脚趾简单可爱；裙子和裙边完全没变
+  3. 靴子位置、大小、样子和输入图一样，靴口里塞着白丝、露出一点白布；除此之外画面没有多出别的东西
+  4. 背景纯绿，没有阴影和地面
+
+
+① bare.png 脱白丝后坐着（stockings_off 的尾帧、bare 的首尾帧、stockings_on 的首帧）
+----------------------------------------------------------
+输入图：raw\stockings_ref\src\barefoot.png
+
+Use case: identity-preserve, strict local edit. Asset: a clean reference frame for a cute, wholesome chibi desktop-pet "resting barefoot" loop, square 1:1.
+Edit target: the supplied image. Preserve EXACTLY the character identity, delicate anime linework, lavender eyes, silver-white long wavy hair, lilac curled dragon horns, pointed ears, white rose hair accessory with purple ribbon, white and lavender lace dress, small dark purple shoulder bag, lilac dragon tail, content smile with light blush, chibi proportions and sitting pose with both legs stretched forward and hands on the ground. Do NOT move, scale, crop or re-center anything: the canvas, her size and her position in the frame stay exactly the same.
+Change only two things:
+1. Her legs: she has taken off her white tights. Her lower legs and feet below the skirt are now bare, with the same fair skin tone and soft shading as her arms and face, simple cute chibi toes, toes pointing up, at the same position and size as the legs in the image.
+2. The pair of white lace-up boots on the right stays EXACTLY where it is, same size and design. The taken-off white tights are loosely rolled up and tucked into the openings of the two boots, one stocking leg in each boot, with a little white fabric hanging over each boot rim. Nothing else is added.
+Keep the skirt and its lace hem exactly as they are, nothing visible under the skirt.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No ground plane, no horizon line, no texture, no gradient, no cast shadow, no contact shadow. No captions, text, watermark, border or extra objects. Make ONE image, not a collage.
+
+
+② bare_lie.png 脱白丝后躺着（头朝左）
+----------------------------------------------------------
+输入图：raw\stockings_ref\src\lie.png
+
+Use case: identity-preserve, strict local edit. Asset: a clean reference frame for a cute, wholesome chibi desktop-pet lying-down loop, square 1:1.
+Edit target: the supplied image. Preserve EXACTLY the character identity, delicate anime linework, lavender eyes, silver-white long wavy hair, lilac curled dragon horns, pointed ears, white rose hair accessory with purple ribbon, white and lavender lace dress, small dark purple shoulder bag, lilac dragon tail with its fin, facial expression, chibi proportions and lying pose (head on the left resting on her arm, lower legs raised behind her). Do NOT move, scale, crop or re-center anything: the canvas, her size and her position in the frame stay exactly the same.
+Change only two things:
+1. Her legs: she has taken off her white tights. Her raised lower legs and feet are now bare, with the same fair skin tone and soft shading as her arms and face, simple cute chibi toes, at the same position, pose and size as the legs in the image.
+2. The pair of white lace-up boots at the lower right stays EXACTLY where it is, same size and design. The taken-off white tights are loosely rolled up and tucked into the openings of the two boots, one stocking leg in each boot, with a little white fabric hanging over each boot rim. Nothing else is added.
+Keep the skirt and its lace hem exactly as they are, nothing visible under the skirt.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No ground plane, no horizon line, no texture, no gradient, no cast shadow, no contact shadow. No captions, text, watermark, border or extra objects. Make ONE image, not a collage.
+
+
+③ bare_read.png 脱白丝后坐着读书
+----------------------------------------------------------
+输入图：raw\stockings_ref\src\read.png
+
+Use case: identity-preserve, strict local edit. Asset: a clean reference frame for a cute, wholesome chibi desktop-pet reading loop, square 1:1.
+Edit target: the supplied image. Preserve EXACTLY the character identity, delicate anime linework, round black glasses, lavender eyes, silver-white long wavy hair, lilac curled dragon horns, pointed ears, white rose hair accessory with purple ribbon, white and lavender lace dress, small dark purple shoulder bag, the open book in her hands, lilac dragon tail, facial expression, chibi proportions and sitting pose. Do NOT move, scale, crop or re-center anything: the canvas, her size and her position in the frame stay exactly the same.
+Change only two things:
+1. Her feet: she has taken off her white tights. Her feet are now bare, with the same fair skin tone and soft shading as her hands and face, simple cute chibi toes, soles of the feet visible, toes pointing up, at the same position and size as the feet in the image.
+2. The pair of white lace-up boots at the lower right stays EXACTLY where it is, same size and design. The taken-off white tights are loosely rolled up and tucked into the openings of the two boots, one stocking leg in each boot, with a little white fabric hanging over each boot rim. Nothing else is added.
+Keep the skirt and its lace hem exactly as they are, nothing visible under the skirt.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No ground plane, no horizon line, no texture, no gradient, no cast shadow, no contact shadow. No captions, text, watermark, border or extra objects. Make ONE image, not a collage.
+
+
+④ bare_type.png 脱白丝后坐地敲键盘
+----------------------------------------------------------
+输入图：raw\stockings_ref\src\type.png
+
+Use case: identity-preserve, strict local edit. Asset: a clean reference frame for a cute, wholesome chibi desktop-pet typing loop, square 1:1.
+Edit target: the supplied image. Preserve EXACTLY the character identity, delicate anime linework, lavender eyes, silver-white long wavy hair, lilac curled dragon horns, pointed ears, white rose hair accessory with purple ribbon, white and lavender lace dress, small dark purple shoulder bag, the white keyboard and her hands on it, lilac dragon tail, facial expression, chibi proportions and sitting pose. Do NOT move, scale, crop or re-center anything: the canvas, her size and her position in the frame stay exactly the same.
+Change only two things:
+1. Her feet: she has taken off her white tights. Her feet, folded to the right side under her skirt, are now bare, with the same fair skin tone and soft shading as her hands and face, simple cute chibi toes, at the same position and size as the feet in the image.
+2. The pair of white lace-up boots at the lower right stays EXACTLY where it is, same size and design, partly behind her foot just like in the image. The taken-off white tights are loosely rolled up and tucked into the openings of the two boots, one stocking leg in each boot, with a little white fabric hanging over each boot rim. Nothing else is added.
+Keep the skirt and its lace hem exactly as they are, nothing visible under the skirt.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No ground plane, no horizon line, no texture, no gradient, no cast shadow, no contact shadow. No captions, text, watermark, border or extra objects. Make ONE image, not a collage.
+
+
+⑤ bare_drag.png 脱白丝后被拎起来（两手各拎一只靴子）
+----------------------------------------------------------
+输入图：raw\stockings_ref\src\drag.png
+
+Use case: identity-preserve, strict local edit. Asset: a clean reference frame for a cute, wholesome chibi desktop-pet "being picked up and dangling in the air" loop, square 1:1.
+Edit target: the supplied image. Preserve EXACTLY the character identity, delicate anime linework, lavender eyes, silver-white long wavy hair (including the tuft at the top of the head), lilac curled dragon horns, pointed ears, white rose hair accessory with purple ribbon, white and lavender lace dress, small dark purple shoulder bag, lilac dragon tail, surprised open-mouth expression, chibi proportions and floating pose with both arms spread out, each hand holding one white lace-up boot. Do NOT move, scale, crop or re-center anything: the canvas, her size and her position in the frame stay exactly the same.
+Change only two things:
+1. Her legs: she has taken off her white tights. Her dangling lower legs and feet below the skirt are now bare, with the same fair skin tone and soft shading as her arms and face, simple cute chibi toes pointing down, at the same position and size as the legs in the image.
+2. The two boots in her hands stay EXACTLY where they are, same size and design, held the same way. The taken-off white tights are loosely rolled up and tucked into the openings of the two boots, one stocking leg in each boot, with a little white fabric hanging over each boot rim. Nothing else is added.
+Keep the skirt and its lace hem exactly as they are, nothing visible under the skirt.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No ground plane, no texture, no gradient, no shadow. No captions, text, watermark, border or extra objects. Make ONE image, not a collage.

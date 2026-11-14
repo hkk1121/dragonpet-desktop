@@ -1,0 +1,54 @@
+{
+  "name": "gpt-desktop-pet",
+  "productName": "GPT桌宠",
+  "version": "1.0.0",
+  "description": "接入 GPT 的桌面宠物",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win portable",
+    "build:setup": "electron-builder --win nsis"
+  },
+  "config": {
+    "electron_mirror": "https://npmmirror.com/mirrors/electron/",
+    "electron_builder_binaries_mirror": "https://npmmirror.com/mirrors/electron-builder-binaries/"
+  },
+  "build": {
+    "appId": "com.gpt.desktoppet",
+    "productName": "GPT桌宠",
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**",
+      "assets/**"
+    ],
+    "win": {
+      "icon": "build/icon.png"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "hkk1121",
+      "repo": "hkking-desktop"
+    },
+    "portable": {
+      "artifactName": "GPT桌宠.exe"
+    },
+    "nsis": {
+      "artifactName": "GPT-DragonPet-Desktop-Setup-${version}.exe",
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "GPT桌宠"
+    },
+    "afterAllArtifactBuild": "./scripts/copy-setup.js"
+  },
+  "devDependencies": {
+    "electron": "^44.7.0",
+    "electron-builder": "^26.15.3"
+  },
+  "dependencies": {
+    "electron-updater": "^6.8.11"
+  }
+}

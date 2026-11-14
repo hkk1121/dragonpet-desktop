@@ -1,0 +1,55 @@
+GPT龙娘 · 边缘偷看参考图（AI 生图）
+==========================================================
+
+新动作：鼠标停在屏幕左 / 右 / 上边缘时，小龙娘从那条边探出半个身子偷看。
+需要 2 张参考图（视频模型生成时首尾帧都用这张图，循环播放）：
+  ① peek_side.png  从画面左边缘探出来（屏幕右边缘时程序水平翻转使用）
+  ② peek_top.png   从画面上边缘倒挂探头
+
+关键：被边缘挡住的那一半身体直接被画面边框截断（就像她躲在画面外面），截断处要紧贴画面边框，
+      这样放到屏幕边上才能严丝合缝。其余三边留空。
+
+图 1（人物外观和大小参考，两张都传）：raw\edge_ref\stand.png
+图 2（只有 ① 传，侧身扶墙探头的姿势参考）：raw\edge_ref\peek_old.png
+
+【输出】1:1 正方形 PNG（960x960 最好，1254x1254 也行，我这边会对齐），放进 raw\edge_ref\
+  peek_side.png  peek_top.png
+每个可以多出几张挑一张，没选上的放进 raw\edge_ref\candidates\，文件名如 peek_side_1.png、peek_top_1.png
+
+挑的标准：
+  1. 头的大小和图 1 一样（太大或太小我这边缩放后会和其他动作不一致）
+  2. 截断的那一侧身体紧贴画面边框，边框上没有留绿边；其余三边头发、角、尾巴都不碰边
+  3. 玫瑰发饰、紫色蝴蝶结、角、尖耳朵等细节和图 1 一致
+  4. 背景纯绿，没有阴影，没有墙、门框之类的物体
+
+
+① peek_side.png 从左边缘探出来
+----------------------------------------------------------
+Use case: identity-preserve, re-pose. Asset: a clean reference frame for a chibi desktop-pet "peeking from the screen edge" loop, square 1:1.
+The first image shows the character; keep her identity and her size. The second image shows her old peeking pose (leaning sideways with her hands on an invisible wall); use it only as a mood reference.
+
+Draw the SAME character peeking into the frame from behind the LEFT border of the image, as if the left border were the edge of a wall or a door frame she is hiding behind.
+Only about the right half of her is visible: her head tilted curiously to the side, one shoulder, a bit of her upper body and dress, and both small hands gripping the left border of the image with her fingers curled around it. Her lilac dragon tail may curl out a little below her body.
+Her body is cut off cleanly by the left border of the image: the hidden half is simply outside the image, and the visible part touches the left border directly along its whole height, with NO green gap between her and the left border.
+She looks toward the right of the frame with big curious lavender eyes and a small shy smile, cheeks slightly blushed.
+
+Her head is the same size as in the first image. Place her vertically centered. Leave clear green margins at the top, right and bottom: nothing touches those three borders.
+Preserve EXACTLY the character identity, delicate anime linework, lavender eyes, silver-white long wavy hair, lilac curled dragon horns, pointed ears, white rose hair accessories with purple ribbon, white and lavender lace dress, small dark purple shoulder bag, lilac dragon tail with its fin, chibi proportions. Her legs are not visible.
+
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No wall, no door frame, no edge line drawn, no ground plane, no texture, no gradient, no cast shadow. No captions, text, watermark, border or extra objects. Make ONE image, not a collage.
+
+
+② peek_top.png 从上边缘倒挂探头
+----------------------------------------------------------
+Use case: identity-preserve, re-pose. Asset: a clean reference frame for a chibi desktop-pet "peeking down from the top of the screen" loop, square 1:1.
+The image shows the character; keep her identity and her size.
+
+Draw the SAME character hanging UPSIDE DOWN from behind the TOP border of the image, as if she were lying on top of the screen and leaning her head over the top edge to peek down.
+Only her upside-down head, her neck and shoulders, and both small hands are visible: her hands grip the top border of the image with fingers curled around it, on both sides of her head. Her face is upside down (chin toward the top border, horns pointing downward), smiling playfully with big curious lavender eyes looking at the viewer.
+Her long silver-white wavy hair hangs straight down because of gravity, below her head, and sways freely. The white rose hair accessory and purple ribbon stay on her head.
+Her body is cut off cleanly by the top border of the image: everything below her shoulders is outside the image, and the visible part touches the top border directly along its whole width, with NO green gap between her and the top border.
+
+Her head is the same size as in the image. Place her horizontally centered. Leave clear green margins on the left, right and bottom: the tips of her hanging hair end well above the bottom border, nothing touches those three borders.
+Preserve EXACTLY the character identity, delicate anime linework, lavender eyes, silver-white long wavy hair, lilac curled dragon horns, pointed ears, white rose hair accessories with purple ribbon, white and lavender lace dress collar, chibi proportions.
+
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No ceiling, no edge line drawn, no texture, no gradient, no cast shadow. No captions, text, watermark, border or extra objects. Make ONE image, not a collage.

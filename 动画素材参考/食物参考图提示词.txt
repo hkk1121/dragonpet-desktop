@@ -1,0 +1,35 @@
+GPT龙娘 · 投喂动画参考首帧（每种食物一张，AI 生图）
+==========================================================
+
+【输入图】pet3_eat.png（双手捧曲奇的那张）
+【输出】960x960（或 1:1 任意尺寸），放进 raw\food_ref\，文件名如下：
+  eat_cake.png  eat_macaron.png  eat_apple.png  eat_rose_tea.png
+每种可以多出几张挑一张：人物大小、站位、脚底位置和输入图一样，只有手里的东西变了。
+
+食物外观尽量和桌宠里的食物图标一致（assets\pet\icons\food_*.png），可以把对应图标作为第二张参考图一起传上去。
+
+
+① eat_cake.png 草莓奶油蛋糕
+----------------------------------------------------------
+Use case: identity-preserve. Asset: a clean reference frame for a chibi desktop-pet eating loop, square 1:1.
+Edit target: the supplied image. Preserve EXACTLY the character identity, delicate anime linework, lavender eyes, silver-white long wavy hair, lilac curled dragon horns, pointed ears, white rose hair accessory with purple ribbon, white and lavender lace dress, small dark purple shoulder bag, white boots, lilac dragon tail, chibi proportions, pose, size and position in the frame. Her feet stay at exactly the same spot.
+Only change the food in her hands: replace the cookie with a small triangular slice of strawberry shortcake (white cream, soft sponge layers, one red strawberry on top), held with both hands in front of her mouth exactly like the cookie was, about to take a small bite, happy blush. No plate, no fork, no crumbs.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No ground plane, no shadow, no gradient, no texture, no text, no watermark, no border, no extra objects. Make ONE image.
+
+
+② eat_macaron.png 马卡龙
+----------------------------------------------------------
+（同①，只把 “Only change the food in her hands: ...” 这一句换成下面这句）
+Only change the food in her hands: replace the cookie with one round pastel pink macaron (smooth shells, cream filling), held with both hands in front of her mouth exactly like the cookie was, about to take a small bite, happy blush. No plate, no crumbs.
+
+
+③ eat_apple.png 苹果
+----------------------------------------------------------
+（同①，替换这一句）
+Only change the food in her hands: replace the cookie with a small shiny red apple with one green leaf on the stem, held with both hands in front of her mouth exactly like the cookie was, about to take a small bite, happy blush. The apple is small enough for her chibi hands. No plate.
+
+
+④ eat_rose_tea.png 白玫瑰花茶
+----------------------------------------------------------
+（同①，替换这一句）
+Only change the food in her hands: replace the cookie with a small white porcelain teacup of light pink rose tea with a white rose petal floating on it, held with both hands in front of her chin, about to take a small sip, happy blush. No saucer, no steam, no spoon.

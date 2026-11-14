@@ -1,0 +1,108 @@
+GPT龙娘 · 钻入星云参考图（AI 生图）
+==========================================================
+
+新动作：小龙娘戴上圆眼镜，抬头望见身后展开一片巨大的星云，蹬地一跃钻进星云中心，过一会儿再从星云里飞出来落地。
+
+做法：龙娘和星云分开做
+  - 龙娘：视频模型在绿幕上生成 3 段（见文末），抠图方式和其他动作一样
+  - 星云：单独一张黑底大图，程序叠在龙娘身后，可以远大于龙娘（窗口临时放大），
+          由程序做展开、旋转、龙娘缩小钻进中心、闪光、再飞出来、星云收拢消失
+  （发光的星云放在绿幕上没法干净抠图，青绿色的星云还会被一起抠掉，所以星云必须单独出、黑底）
+
+需要你出下面 3 张图：
+  ① nebula.png         星云本体（黑底，越大越好）
+  ② nebula_dive.png    戴眼镜、背对镜头往画面深处飞（钻入星云的姿势）
+  ③ nebula_return.png  戴眼镜、迎着镜头张开双臂飞出来（飞出星云的姿势）
+
+【输出】放进 raw\nebula_ref\
+  ① 1:1 正方形 PNG，分辨率越高越好（2048x2048 最好，至少 1254x1254）
+  ②③ 1:1 正方形 PNG（960x960 最好，1254x1254 也行，我这边会对齐）
+每张可以多出几张挑一张，没选上的放进 raw\nebula_ref\candidates\，文件名如 nebula_1.png、nebula_dive_2.png
+
+挑的标准：
+  ① 星云：
+    1. 正对镜头的圆形漩涡（不要斜着的椭圆），最亮的核心正好在画面中心，程序要绕中心旋转
+    2. 颜色以薰衣草紫、紫罗兰、粉、深靛蓝、银白为主，点缀金色星尘，和龙娘的配色呼应；完全没有绿色、青色
+    3. 四周慢慢暗到纯黑，四条边都是纯黑，星云的气体不碰边
+    4. 层次丰富壮丽：有明亮的气体旋臂、暗色尘埃带、核心光芒、大小星星，不要糊成一团
+    5. 画面里只有星云和星星，没有行星、人物、文字
+  ②③ 龙娘：
+    1. 头的大小和站姿图一样（太大或太小我这边缩放后会和其他动作不一致），整个人在画面中间，四周留绿边，头发、角、尾巴都不碰边
+    2. 圆眼镜和读书时的一样（细黑框正圆镜片）
+    3. 玫瑰发饰、紫色蝴蝶结、角、尖耳朵、斜挎小包、白靴子等细节和站姿图一致
+    4. 背景纯绿，没有星云、星星、光效、阴影
+
+
+① nebula.png 星云本体
+----------------------------------------------------------
+不用传图
+
+Asset: a standalone glowing effect layer for a desktop app, square 1:1, highest resolution available. It will be composited over other things with the black treated as transparent, so the background must be pure black.
+
+A majestic, breathtaking spiral nebula seen perfectly face-on, like a swirling cosmic vortex or a portal into a galaxy, drawn in a rich, luminous anime fantasy illustration style, like the cosmic sky of a high-budget anime film.
+Its blazing bright core sits exactly at the center of the image: a radiant white-lavender heart of light with soft light rays. Around it, several graceful spiral arms of glowing gas curl outward in a clean, circular swirl, with fine wispy filaments, soft volumetric clouds, dark dust lanes between the arms for depth, and layers of faint outer veils. Countless stars of different sizes are scattered through it, with sparkling golden stardust along the arms and a few brighter twinkling stars.
+Color palette: lavender, violet, soft magenta-pink, deep indigo and royal blue in the outer parts, silver-white and pale pink near the core, accents of warm gold. Absolutely no green, no teal, no cyan, no turquoise anywhere.
+The nebula is a circle centered in the image, filling about 85% of the width. It fades out gradually and softly into the background; all four borders of the image are pure black, no gas or glow reaches the edges.
+
+Background: completely pure black RGB(0,0,0), hex #000000, everywhere outside the nebula. No planets, no moons, no characters, no silhouettes, no spaceships, no landscape, no horizon, no frame, no vignette border, no lens flare streaks across the image, no text, no watermark. Make ONE image, not a collage.
+
+
+② nebula_dive.png 钻入星云（背对镜头往深处飞）
+----------------------------------------------------------
+图 1（人物外观和大小参考）：raw\nebula_ref\src\stand.png
+图 2（眼镜参考）：raw\nebula_ref\src\glasses.png
+
+Use case: identity-preserve, re-pose. Asset: a clean reference frame for a chibi desktop-pet "diving into a nebula" animation, square 1:1.
+The first image shows the character; keep her identity and her size. The second image only shows the round glasses she wears; ignore its pose and the book.
+
+Draw the SAME character wearing the round thin black-rimmed glasses from the second image, flying away from the viewer as if diving up into the depths of the sky: we see her mostly from behind in a three-quarter back view, her body tilted forward and upward, both arms stretched straight up and forward above her head with her hands together like a diver, legs together and pointed back toward the viewer, her white boots on.
+She glances back over her shoulder a little, so we can see her excited sparkling lavender eye, a bit of her cheek with a light blush and the rim of her glasses.
+Her long silver-white wavy hair, her skirt and her lilac dragon tail stream backward toward the viewer from the speed. Her small dark purple shoulder bag stays on her.
+
+Her head is the same size as in the first image. Place her in the center of the frame. Leave clear green margins on all four sides: her hands, hair, horns, tail and boots do not touch any border.
+Preserve EXACTLY the character identity, delicate anime linework, lavender eyes, silver-white long wavy hair, lilac curled dragon horns, pointed ears, white rose hair accessory with purple ribbon, white and lavender lace dress, small dark purple shoulder bag, white lace-up boots, lilac dragon tail with its fin, chibi proportions. Nothing visible under the skirt.
+
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No nebula, no stars, no sparkles, no glow, no speed lines, no motion blur, no ground plane, no cast shadow. No captions, text, watermark, border or extra objects. Make ONE image, not a collage.
+
+
+③ nebula_return.png 飞出星云（迎着镜头张开双臂）
+----------------------------------------------------------
+图 1（人物外观和大小参考）：raw\nebula_ref\src\stand.png
+图 2（眼镜参考）：raw\nebula_ref\src\glasses.png
+
+Use case: identity-preserve, re-pose. Asset: a clean reference frame for a chibi desktop-pet "flying back out of a nebula" animation, square 1:1.
+The first image shows the character; keep her identity and her size. The second image only shows the round glasses she wears; ignore its pose and the book.
+
+Draw the SAME character wearing the round thin black-rimmed glasses from the second image, floating in mid-air facing the viewer as if she has just flown out toward us: front view, both arms spread wide open in joy, legs together and slightly bent back, her white boots on, her body slightly tilted forward.
+She has a huge delighted smile with her mouth open, big sparkling lavender eyes full of wonder behind her glasses, rosy blushing cheeks.
+Her long silver-white wavy hair, her skirt and her lilac dragon tail float softly upward and outward behind her as if she is gently slowing down. Her small dark purple shoulder bag stays on her.
+
+Her head is the same size as in the first image. Place her in the center of the frame. Leave clear green margins on all four sides: her hands, hair, horns, tail and boots do not touch any border.
+Preserve EXACTLY the character identity, delicate anime linework, lavender eyes, silver-white long wavy hair, lilac curled dragon horns, pointed ears, white rose hair accessory with purple ribbon, white and lavender lace dress, small dark purple shoulder bag, white lace-up boots, lilac dragon tail with its fin, chibi proportions. Nothing visible under the skirt.
+
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No nebula, no stars, no sparkles, no glow, no speed lines, no motion blur, no ground plane, no cast shadow. No captions, text, watermark, border or extra objects. Make ONE image, not a collage.
+
+
+==========================================================
+以下是我这边的（不用你做）
+==========================================================
+
+【视频模型生成 3 段龙娘】960x960，107 帧，绿底
+  nebula_in   不循环  首帧 站姿            尾帧 nebula_dive.png
+              [0s-1s] 从小包里拿出圆眼镜戴上，推一下镜框
+              [1s-2s] 抬头望向上方，眼睛闪闪发亮、张嘴惊叹
+              [2s-2.8s] 握拳兴奋地下蹲蓄力
+              [2.8s-end] 蹬地跃起、转身背对镜头，变成 ② 的飞行姿势
+  nebula_fly  循环    首尾帧 nebula_dive.png
+              保持飞行姿势，头发、裙摆、尾巴往后飘动（程序把她缩小、旋进星云中心时播放）
+  nebula_out  不循环  首帧 nebula_return.png  尾帧 站姿
+              [0s-1.2s] 张开双臂轻飘飘落下  [1.2s-2s] 双脚轻轻落地
+              [2s-3.2s] 摘下眼镜收进小包，开心地回味  [3.2s-end] 回到站姿
+
+【星云】nebula.png 按亮度转成透明度（黑 = 全透明），必要时用视频模型做一段缓慢旋转的循环；否则程序用两层反向慢转
+
+【程序编排】（右键「播放动作」/ 菜单里加「钻入星云」）
+  1. 窗口临时放大，播 nebula_in；星云在她身后从一个光点展开、慢慢旋转、越来越亮
+  2. 跃起后切 nebula_fly，程序把她边缩小边旋进星云核心，淡出，核心闪一下
+  3. 星云独自旋转几秒（她在里面玩）
+  4. 核心再闪一下，播 nebula_out，她从核心由小变大飞出来，落地时星云收拢消失，窗口恢复

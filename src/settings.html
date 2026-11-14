@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' file:; style-src 'self' 'unsafe-inline'">
+  <title>桌宠设置</title>
+  <style>
+    /* 橙黄色主题：橙黄到奶油色的渐变背景，设置项按分组放在圆角卡片里 */
+    body {
+      margin: 0;
+      padding: 20px 18px 28px;
+      font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+      font-size: 14px;
+      color: #4a2e14;
+      background: linear-gradient(#ffb547, #ffd58a 50%, #fff1d6) fixed;
+      accent-color: #ff8a1f;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 4px;
+    }
+    .header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 14px;
+      box-shadow: 0 2px 6px rgba(138, 90, 43, 0.25);
+    }
+    h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .subtitle {
+      margin-top: 2px;
+      color: #8a5a2b;
+    }
+    .card {
+      margin-top: 14px;
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.97);
+      box-shadow: 0 2px 6px rgba(138, 90, 43, 0.15);
+    }
+    .header + .card {
+      margin-top: 20px;
+    }
+    .card-title {
+      color: #e0700f;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin: 14px 0 6px;
+      color: #8a6440;
+      font-size: 13px;
+    }
+    .tip {
+      color: #b0906c;
+      font-size: 12px;
+    }
+    input[type=text], input[type=password], input[type=number], textarea, select {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 9px 14px;
+      border: 1px solid #ffdca8;
+      border-radius: 12px;
+      outline: none;
+      background: #fff8ec;
+      color: #4a2e14;
+      font-size: 14px;
+      font-family: inherit;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: #ff8a1f;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #c4a27c;
+    }
+    textarea {
+      height: 100px;
+      resize: vertical;
+    }
+    input[type=range] {
+      width: 100%;
+    }
+    .check {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+      color: #4a2e14;
+      font-size: 14px;
+    }
+    button {
+      margin-top: 22px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(to right, #ffa53d, #ff7a1a);
+      box-shadow: 0 2px 6px rgba(255, 122, 26, 0.35);
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: inherit;
+      cursor: pointer;
+    }
+    button:hover {
+      filter: brightness(1.05);
+    }
+    .row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .row select {
+      flex: 1;
+    }
+    button.small {
+      margin-top: 0;
+      width: auto;
+      padding: 6px 18px;
+      border: 1px solid #ffb766;
+      background: #fff3e0;
+      box-shadow: none;
+      color: #e0700f;
+      font-size: 14px;
+      font-weight: normal;
+      white-space: nowrap;
+    }
+    .footer {
+      margin-top: 16px;
+      text-align: center;
+      line-height: 1.7;
+      color: #9a7148;
+      font-size: 13px;
+    }
+    .version {
+      margin: 8px 0 12px;
+    }
+    /* 进入人设设定页的入口按钮 */
+    button.entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+      padding: 10px 14px;
+      border: 1px solid #ffdca8;
+      border-radius: 12px;
+      background: #fff8ec;
+      box-shadow: none;
+      color: #4a2e14;
+      font-size: 14px;
+      font-weight: normal;
+      text-align: left;
+    }
+    textarea.tall {
+      height: 150px;
+    }
+  </style>
+</head>
+<body>
+  <div id="mainPage">
+    <div class="header">
+      <img src="../assets/icon.png" alt="">
+      <div>
+        <h2>桌宠设置</h2>
+        <div class="subtitle">住在你电脑桌面上的小龙娘</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">聊天接口</div>
+      <label>API Key</label>
+      <input id="apiKey" type="password" placeholder="sk-...">
+      <label>API 地址 <span class="tip">OpenAI 兼容接口，使用中转/代理时修改这里</span></label>
+      <input id="baseURL" type="text">
+      <label>代理地址 <span class="tip">留空使用系统代理；系统代理没开时填本机代理，例如 http://127.0.0.1:17890</span></label>
+      <input id="proxy" type="text" placeholder="留空使用系统代理">
+      <label>模型 <span class="tip">填好 API Key 后自动读取可用模型，也可以手动填写</span></label>
+      <div class="row">
+        <select id="modelSelect"><option value="">— 先读取可用模型 —</option></select>
+        <button id="loadModels" class="small" type="button">读取模型</button>
+      </div>
+      <input id="model" type="text" placeholder="模型名，例如 gpt-4o-mini">
+      <div id="modelStatus" class="tip"></div>
+      <button id="openPersona" class="entry" type="button"><span>人设设定 <span class="tip">名字、性格、说话风格、记忆、主动搭话</span></span><span>›</span></button>
+    </div>
+
+    <div class="card">
+      <div class="card-title">外观与行为</div>
+      <label>体型 <span class="tip">大档为素材原图大小</span></label>
+      <select id="sizeLevel">
+        <option value="small">小</option>
+        <option value="medium">中</option>
+        <option value="large">大</option>
+      </select>
+      <div id="displayRow" hidden>
+        <label>活动屏幕 <span class="tip">检测到多块屏幕时，指定桌宠待在哪块屏幕上，走动、偷看、拖拽都不会跑到别的屏幕</span></label>
+        <select id="displayId"></select>
+      </div>
+      <label class="check"><input id="walkEnabled" type="checkbox">自由走动</label>
+      <label class="check"><input id="gazeEnabled" type="checkbox">跟随鼠标 <span class="tip">鼠标在旁边移动时转头看向鼠标</span></label>
+      <label class="check"><input id="edgePeekEnabled" type="checkbox">边缘偷看 <span class="tip">鼠标在屏幕左、右、上边缘停一秒时，她从那条边探出头来偷看</span></label>
+      <label class="check"><input id="pinGPT" type="checkbox">固定在 GPT 里 <span class="tip">待在 ChatGPT 窗口底部，跟随窗口移动；取消则释放到桌面</span></label>
+      <label class="check"><input id="topOnFullscreen" type="checkbox">全屏时保持显示 <span class="tip">压在无边框全屏游戏/视频上面；关闭则全屏时隐藏，退出全屏后自动出现</span></label>
+      <label class="check"><input id="typeEnabled" type="checkbox">跟着我打字 <span class="tip">你打字时她也坐下来敲键盘；只统计按键次数，不记录按了什么</span></label>
+    </div>
+
+    <div class="card">
+      <div class="card-title">声音</div>
+      <label class="check"><input id="voiceEnabled" type="checkbox">说话时播放语音 <span class="tip">关闭时只显示气泡</span></label>
+      <label>语音音量 <span class="tip">相对于系统音量</span></label>
+      <input id="voiceVolume" type="range" min="0" max="100">
+    </div>
+
+    <div class="card">
+      <div class="card-title">更新</div>
+      <div id="version" class="version"></div>
+      <div class="row">
+        <button id="checkUpdate" class="small" type="button">检查更新</button>
+        <button id="releases" class="small" type="button">打开 Releases 页面</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="personaPage" hidden>
+    <div class="header">
+      <button id="closePersona" class="small" type="button">‹ 返回</button>
+      <div>
+        <h2>人设设定</h2>
+        <div class="subtitle">她是谁、怎么说话、记得什么</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">人设</div>
+      <label>名字</label>
+      <input id="petName" type="text">
+      <label>怎么称呼你 <span class="tip">留空时称呼“你”</span></label>
+      <input id="userName" type="text" placeholder="例如：主人">
+      <label>人格设定 <span class="tip">她是谁、什么性格，可以写外貌和喜好</span></label>
+      <textarea id="personality" class="tall"></textarea>
+      <label>说话风格 <span class="tip">语气、回复长短、口头禅等</span></label>
+      <textarea id="replyStyle" class="tall"></textarea>
+      <div class="tip" style="margin-top: 8px">聊天时会自动带上当前时间、饱食度、好感度、穿着和动作，她回复时会按心情选一个动作来做</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">记忆与主动搭话</div>
+      <label>记忆条数 <span class="tip">保留最近多少条对话作为上下文，重启后也还在</span></label>
+      <input id="maxHistory" type="number" min="0" max="100">
+      <label class="check"><input id="memoryEnabled" type="checkbox">长期记忆 <span class="tip">超出记忆条数的旧对话每攒 10 条整理一次，记下你的喜好和你们的约定</span></label>
+      <label>她记得的事 <span class="tip">每行一条，可以手动修改或清空</span></label>
+      <textarea id="memories" class="tall" placeholder="聊得多了她会自己记下来"></textarea>
+      <label class="check"><input id="proactiveEnabled" type="checkbox">主动搭话 <span class="tip">20~40 分钟没聊天、你在用电脑时，她会按人设决定要不要主动找你说一句（只有气泡，没有语音）</span></label>
+    </div>
+  </div>
+
+  <button id="save">保存</button>
+  <div class="footer">点头摸头、点腿嫌弃，拖动可以甩出去<br>右键打开菜单，可以在菜单里和她聊天</div>
+  <script src="settings.js"></script>
+</body>
+</html>

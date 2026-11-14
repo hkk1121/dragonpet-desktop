@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' file: data:; media-src 'self' file:; style-src 'self' 'unsafe-inline'">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="nebula"></canvas>
+  <div id="bubble" class="hidden">
+    <div id="bubble-text"></div>
+  </div>
+  <div id="input-box" class="hidden">
+    <input id="chat-input" placeholder="和我说点什么吧…（Enter 发送，Esc 关闭）" maxlength="500">
+  </div>
+  <canvas id="pet"></canvas>
+  <img id="food" class="hidden" alt="">
+  <script src="renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+GPT龙娘 · 桌宠动画提示词（第二批）
+==========================================================
+
+【参考图】
+4-video-front-green.png  正面（截自上一批视频，大小和位置已对齐）→ 摸头 / 蹦跳 / 躺 / 嫌弃 / 读书
+5-video-left-green.png   侧面（截自上一批视频）                → 扒边偷看
+优先用这两张，人物大小、站位和上一批一致，抠出来的尺寸才对得上；
+工具支持多张参考图时，可以把 1-front-green.png / 3-back-green.png 一起传上去，帮助保持角色一致
+
+【通用设置】（和上一批一样）
+- 画面比例 1:1，分辨率 720p 及以上
+- 镜头"固定 / 静止"，关闭运镜
+- 循环动作开启"首尾帧"，首帧尾帧都传同一张参考图
+- 可以像上次一样把几个动作做进同一个视频，我来切；每段之间最好回到站立姿势
+- 每个动作多生成几次，挑脚底最稳、人物不漂移的那条
+
+【通用负面提示词】
+镜头移动, 推拉镜头, 缩放, 旋转, 人物位移, 走出画面, 背景变化, 阴影, 文字, 水印, 多余的人物, 手入画, 画面外的手, 角色变形, 换装, 发色改变
+
+
+==========================================================
+① pat 摸头（点击头部）    参考图：4-video-front-green.png    时长：2~3 秒    循环
+----------------------------------------------------------
+全身Q版龙娘原地站立，像被看不见的手温柔地摸头，舒服地眯起眼睛、脸颊泛红，开心地微笑，头顶的头发被轻轻按下又弹起，头随着抚摸左右轻轻蹭动，双手合在胸前，龙尾开心地左右摇摆，画面中不出现手，双脚不离地、位置不变，固定机位，镜头完全静止，人物不移动位置，纯绿色背景保持不变，无阴影，无文字，首尾帧一致可无缝循环
+
+
+==========================================================
+② peek 扒边偷看（贴在屏幕左右边缘）    参考图：5-video-left-green.png    时长：2~3 秒    循环
+----------------------------------------------------------
+全身Q版龙娘侧身站立，面朝画面左侧，身体前倾，像躲在门框后面一样探出上半身偷看，一只手扶在身前的空气上，好奇地歪头看向镜头，眨眨眼，轻轻挥一下手，长发和龙尾轻轻晃动，画面中不出现墙和门，只有人物，双脚不离地、位置不变，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字，首尾帧一致可无缝循环
+
+（说明：做完整全身即可，"只露半个身子"由程序把窗口推出屏幕边缘来实现；贴右边时程序会自动水平翻转）
+
+
+==========================================================
+③ jump 开心蹦跳（待机）    参考图：4-video-front-green.png    时长：2 秒左右    循环
+----------------------------------------------------------
+全身Q版龙娘开心地原地连续蹦跳两下，笑容灿烂，双手握拳举在胸前，跳起时裙摆、长发和龙尾向上飘起，落地时轻轻下蹲缓冲，每次都落回同一个位置，不左右移动，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字，首尾帧一致可无缝循环
+
+
+==========================================================
+④ lie 休闲躺    参考图：4-video-front-green.png    时长：3~4 秒    循环
+----------------------------------------------------------
+Q版龙娘悠闲地侧躺在地上，一只手撑着头，面朝镜头，表情慵懒满足，偶尔眨眼，翘起的小腿轻轻晃动，龙尾在身后慢慢摆动，身体随呼吸轻微起伏，整个人完整在画面内、躺在画面下方，位置不变，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字，首尾帧一致可无缝循环
+
+（说明：这个动作不用首尾帧功能，因为参考图是站姿；生成后挑一段平稳的我来做循环）
+
+
+==========================================================
+⑤ dislike 嫌弃挪腿（点击腿部）    参考图：4-video-front-green.png    时长：1.5~2 秒    不循环
+----------------------------------------------------------
+全身Q版龙娘被戳了一下腿，露出嫌弃的表情，皱眉撇嘴、半眯着眼斜看镜头，把被戳的那条腿往旁边挪开一步，身体微微后仰躲开，双手抱在胸前，龙尾不满地甩了一下，之后保持嫌弃的站姿，画面中不出现手，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字
+
+
+==========================================================
+⑥ read 戴眼镜读书    参考图：4-video-front-green.png    时长：4~5 秒    循环
+----------------------------------------------------------
+全身Q版龙娘戴着圆框眼镜，坐在地上双手捧着一本书认真阅读，眼睛跟着文字左右移动，偶尔轻轻翻一页，偶尔推一下眼镜，表情专注安静，长发和龙尾自然垂落轻轻晃动，整个人完整在画面内、坐在画面下方，位置不变，固定机位，镜头完全静止，纯绿色背景保持不变，无阴影，无文字，首尾帧一致可无缝循环
+
+（说明：这个动作不用首尾帧功能，因为参考图没戴眼镜、是站姿；如果想要"戴上眼镜"的开场，可以另做一段 1~2 秒不循环的：从站姿拿出眼镜戴上，再坐下翻开书）
+
+
+==========================================================
+【英文版】（工具对中文理解不好时使用，结尾统一追加这一段）
+----------------------------------------------------------
+, chibi dragon girl, full body, fixed camera, static shot, no camera movement, character stays in place, solid pure green background, no shadow, no text, no hands entering the frame, seamless loop
+
+pat     : standing, being gently patted on the head by an invisible hand, eyes closed happily, blushing, head nuzzling side to side, hair pressed down and springing back, hands together at chest, tail wagging
+peek    : side view facing left, leaning forward and peeking out as if from behind a door frame, one hand resting on the air in front, tilting head curiously at the camera, blinking, small wave, no wall or door visible
+jump    : hopping happily in place twice, big smile, fists at chest, skirt hair and tail floating up on each jump, soft landing on the same spot
+lie     : lying on her side on the ground, propping her head on one hand, facing the camera, lazy content expression, lower legs swinging, tail swaying slowly (no first/last frame)
+dislike : poked on the leg, disgusted look, frowning and pouting, side-eyeing the camera, steps the poked leg away, leans back slightly, arms crossed, tail flicks once (not loop)
+read    : wearing round glasses, sitting on the ground holding an open book, reading attentively, eyes moving along the lines, turning a page, pushing up the glasses (no first/last frame)
+
+
+==========================================================
+【做好之后】
+放进 raw\ 告诉我即可，合成一个视频或分开都行。
+程序侧要改的：点击头部/腿部分区判断、贴边时把窗口推出屏幕一半、新动作的触发时机，这些等素材到了我一起做。

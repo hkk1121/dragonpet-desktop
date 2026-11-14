@@ -1,0 +1,93 @@
+GPT龙娘 · 光脚姿势参考图（AI 生图）
+==========================================================
+
+本批对应脱鞋后的 4 个光脚动作（视频模型生成时首尾帧都用这张图，循环播放）：
+  barefoot_lie   脱鞋后趴着躺        （已完成：raw\shoes_ref\barefoot_lie.png，不满意可按 ④ 重做）
+  barefoot_read  脱鞋后坐着读书
+  barefoot_type  脱鞋后坐地敲键盘
+  barefoot_drag  脱鞋后被鼠标拎起来（两手各拎一只靴子）
+
+每张都传 2 张图：
+  图 1（编辑目标）：原来穿靴子的姿势，路径见各条
+  图 2（靴子和白袜脚的外观参考）：raw\shoes_ref\candidates\barefoot_3.png
+      （坐在地上、右边并排放着一双白色系带靴子的那张）
+
+【输出】1:1 正方形 PNG（960x960 最好，1254x1254 也行，我这边会对齐），放进 raw\shoes_ref\
+  barefoot_read.png  barefoot_type.png  barefoot_drag.png
+每个姿势可以多出几张挑一张，挑的标准：
+  1. 人物位置、大小和图 1 一样（把两张图叠起来看，头、角、身体基本重合）
+  2. 脚上是白色连裤袜（不是光着的皮肤），靴子完整清楚、和图 2 是同一双
+  3. 背景纯绿，没有阴影和地面
+没选上的候选可以放进 raw\shoes_ref\candidates\，文件名如 barefoot_read_1.png、barefoot_read_2.png
+
+
+① barefoot_read.png 坐着读书
+----------------------------------------------------------
+图 1：raw\shoes_ref\src\read_boots.png
+
+Use case: identity-preserve, strict local edit. Asset: a clean reference frame for a chibi desktop-pet reading loop, square 1:1.
+Edit target: the first image. Preserve EXACTLY the character identity, delicate anime linework, round black glasses, lavender eyes, silver-white long wavy hair, lilac curled dragon horns, pointed ears, white rose hair accessory with purple ribbon, white and lavender lace dress, small dark purple shoulder bag, the open book in her hands, lilac dragon tail, facial expression, chibi proportions and sitting pose. Do NOT move, scale, crop or re-center anything: the canvas, her size and her position in the frame stay exactly the same.
+Only change her feet: she has taken off her white lace-up boots. Her feet now wear only her white tights (white fabric, not bare skin), soles of the feet visible, toes pointing up, at the same position where the boots were.
+The pair of white lace-up boots (same design as the boots in the second image) stands neatly side by side on the ground on the LEFT side of her, close to the skirt but not overlapping it, fully visible. The soles of the boots are at the same height as the bottom of her feet (the same ground line).
+Keep the skirt hem exactly as it is, nothing visible under the skirt.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No ground plane, no horizon line, no texture, no gradient, no cast shadow, no contact shadow. No captions, text, watermark, border or extra objects. Make ONE image, not a collage.
+
+
+② barefoot_type.png 坐地敲键盘
+----------------------------------------------------------
+图 1：raw\shoes_ref\src\type_boots.png
+
+Use case: identity-preserve, strict local edit. Asset: a clean reference frame for a chibi desktop-pet typing loop, square 1:1.
+Edit target: the first image. Preserve EXACTLY the character identity, delicate anime linework, lavender eyes, silver-white long wavy hair, lilac curled dragon horns, pointed ears, white rose hair accessory with purple ribbon, white and lavender lace dress, small dark purple shoulder bag, the white keyboard and her hands on it, lilac dragon tail, facial expression, chibi proportions and sitting pose. Do NOT move, scale, crop or re-center anything: the canvas, her size and her position in the frame stay exactly the same.
+Only change her feet: she has taken off her white lace-up boots. Her feet, folded to the right side under her skirt, now wear only her white tights (white fabric, not bare skin), at the same position where the boots were.
+The pair of white lace-up boots (same design as the boots in the second image) stands neatly side by side on the ground on the RIGHT side of the frame, to the right of her feet and below the tail fin, not touching the tail, the skirt or the keyboard, fully visible. The soles of the boots are on the same ground line as the bottom of her skirt and the keyboard.
+Keep the skirt hem exactly as it is, nothing visible under the skirt.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No ground plane, no horizon line, no texture, no gradient, no cast shadow, no contact shadow. No captions, text, watermark, border or extra objects. Make ONE image, not a collage.
+
+
+③ barefoot_drag.png 被拎起来（两手各拎一只靴子）
+----------------------------------------------------------
+图 1：raw\shoes_ref\src\drag_boots.png
+
+Use case: identity-preserve, strict local edit. Asset: a clean reference frame for a chibi desktop-pet "being picked up and dangling in the air" loop, square 1:1.
+Edit target: the first image. Preserve EXACTLY the character identity, delicate anime linework, lavender eyes, silver-white long wavy hair (including the tuft at the top of the head), lilac curled dragon horns, pointed ears, white rose hair accessory with purple ribbon, white and lavender lace dress, small dark purple shoulder bag, lilac dragon tail, surprised open-mouth expression, chibi proportions and floating pose with both arms spread out to the sides. Do NOT move, scale, crop or re-center anything: the canvas, her size and her position in the frame stay exactly the same.
+Change only two things:
+1. Her feet: the boots are gone, her dangling feet now wear only her white tights (white fabric, not bare skin), toes pointing down, at the same position where the boots were.
+2. Her hands: each outstretched hand holds one white lace-up boot (same design as the boots in the second image) by the boot top / laces, the boot hanging straight down below the hand. Keep the arms in the same spread-out position, only the fingers close to grip the boot. Both boots fully visible, not overlapping the skirt, hair or tail.
+Keep the skirt hem exactly as it is, nothing visible under the skirt.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No ground plane, no texture, no gradient, no shadow. No captions, text, watermark, border or extra objects. Make ONE image, not a collage.
+
+
+④ barefoot_lie.png 趴着躺（已完成，不满意时再做）
+----------------------------------------------------------
+图 1：raw\shoes_ref\src\lie_boots.png
+现有成品的问题：人物整体比原图往右上偏了一点、略小，不影响使用。
+
+Use case: identity-preserve, strict local edit. Asset: a clean reference frame for a chibi desktop-pet lying-down loop, square 1:1.
+Edit target: the first image. Preserve EXACTLY the character identity, delicate anime linework, lavender eyes, silver-white long wavy hair, lilac curled dragon horns, pointed ears, white rose hair accessory with purple ribbon, white and lavender lace dress, small dark purple shoulder bag on the ground, lilac dragon tail (including the tail fin behind her feet), facial expression, chibi proportions and lying pose. Do NOT move, scale, crop or re-center anything: the canvas, her size and her position in the frame stay exactly the same.
+Only change her feet: she has taken off her white lace-up boots. Her feet now wear only her white tights (white fabric, not bare skin), same position and pose where the boots were.
+The pair of white lace-up boots (same design as the boots in the second image) stands neatly side by side on the ground at the far LEFT of the frame, not overlapping her feet or tail, fully visible, smaller margin is fine. The soles of the boots are on the same ground line as her body lying on the ground.
+Keep the skirt hem exactly as it is, nothing visible under the skirt.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No ground plane, no horizon line, no texture, no gradient, no cast shadow, no contact shadow. No captions, text, watermark, border or extra objects. Make ONE image, not a collage.
+
+
+⑤ barefoot_lie_r.png 头朝左躺（2026-10-14，靴子要和光脚待机同一位置，避免切换时靴子跳位）
+----------------------------------------------------------
+现有躺姿头在右边，正好占住光脚待机时靴子的位置（画面右下），所以换成头朝左、脚朝右的躺姿，靴子放在脚边右下角。
+图 1（人物和躺姿参考）：raw\shoes_ref\barefoot_lie.png
+图 2（靴子位置参考）：raw\shoes_ref\barefoot.png
+输出：raw\shoes_ref\barefoot_lie_r.png（多出几张的话候选放 candidates\barefoot_lie_r_1.png …）
+挑的标准：
+  1. 头在左、脚在右，人物大小和图 1 差不多，左边留出空隙（头发不要贴到画面左边缘）
+  2. 一双靴子在右下角，位置和大小尽量和图 2 里的靴子一样（我这边会再把图 2 的靴子精确贴到同一位置，所以差一点没关系），靴子不要被脚、尾巴、头发挡住
+  3. 玫瑰发饰、斜挎包等细节和图 1 一致，不是简单左右翻转的图
+  4. 白色连裤袜脚，背景纯绿，没有阴影
+
+Use case: identity-preserve, re-pose. Asset: a clean reference frame for a chibi desktop-pet lying-down loop, square 1:1.
+The first image shows the character and the lying pose. The second image only shows where the pair of white lace-up boots must stand.
+Draw the SAME character lying on her stomach on the ground in the same relaxed pose as the first image, propping her head with one hand and facing the camera with a lazy content face, lower legs raised behind her — but facing the OTHER direction: her head and upper body on the LEFT side of the frame, her legs and feet on the RIGHT side.
+Preserve EXACTLY the character identity, delicate anime linework, lavender eyes, silver-white long wavy hair, lilac curled dragon horns, pointed ears, white rose hair accessory with purple ribbon, white and lavender lace dress, small dark purple shoulder bag on the ground, lilac dragon tail, chibi proportions. Keep her the same size as in the first image. This is a re-pose, NOT a mirrored copy: keep all accessories on the same side of her body as in the first image.
+She is not wearing boots: her feet wear only her white tights (white fabric, not bare skin).
+The pair of white lace-up boots stands neatly side by side on the ground at the lower RIGHT of the frame, at EXACTLY the same position and size as the boots in the second image, fully visible. Her raised feet and the tail end to the LEFT of the boots and do not overlap or cover them.
+Leave a clear margin of about 10% of the frame width between her hair and the left edge of the frame; nothing touches any edge of the frame. Her body lies on the same ground line as the soles of the boots.
+Background: a single completely uniform, flat solid chroma green RGB(0,184,0), hex #00B800, unchanged everywhere. No ground plane, no horizon line, no texture, no gradient, no cast shadow, no contact shadow. No captions, text, watermark, border or extra objects. Make ONE image, not a collage.
